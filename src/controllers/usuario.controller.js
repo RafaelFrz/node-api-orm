@@ -47,8 +47,8 @@ exports.createUsuario = async (req, res) => {
 
   try {
     let novoUsuario = await Usuario.create({
-      login,
-      senha,
+      login: login,
+      senha: senha,
     });
     return res.send(novoUsuario);
   } catch (err) {
